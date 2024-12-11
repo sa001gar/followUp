@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>followUp</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">followUp</a>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="buttons">
+        <a href="login/login.html" class="button login">Login</a>
+        <a href="login/login.html" class="button admin-login">Admin Login</a>
+      </div>
+      <button class="mobile-menu-button" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <a href="login/login.html" class="button login">Login</a>
+      <a href="login/login.html" class="button admin-login">Admin Login</a>
+    </div>
+  </nav>
+
+  <div class="header">
+    <h1>Welcome to <span>FollowUp!</span></h1>
+  </div>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://i.ibb.co/tPLjt4v/doc.jpg" alt="Slide 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://via.placeholder.com/800x400?text=Slide+4" alt="Slide 4">
+      </div>
+    </div>
+    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <div style="background-color: #FFD700; padding: 20px; text-align: center;">
+    <h2 style="color: #1f2937;">Golden Section</h2>
+    <p style="color: #1f2937;">This is a section with a golden background.</p>
+  </div>
+  <div style="background-color: #FF4500; padding: 20px; text-align: center;">
+    <h2 style="color: white;">Orange Section</h2>
+    <p style="color: white;">This is a section with an orange background.</p>
+  </div>
+
+  <div class="info-section">
+    <div class="container" style="display: flex; gap: 24px; flex-wrap: wrap;">
+      <div class="info-card location-card">
+        <h3>Location</h3>
+        <p>MANKAR COLLEGE</p>
+        <p>MANKAR</p>
+        <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+      </div>
+      <div class="info-card contact-card">
+        <h3>Contact</h3>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@example.com</p>
+        <p>Fax: (123) 456-7891</p>
+      </div>
+      <div class="info-card service-card">
+        <h3>Service</h3>
+        <p>Web Development</p>
+        <p>App Development</p>
+        <p>Digital Marketing</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+</body>
+</html>
