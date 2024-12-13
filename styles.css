@@ -216,3 +216,15 @@ body {
   .contact-card { background-color: #16a34a; }
   .service-card { background-color: #7c3aed; }
   
+
+
+
+  #orga{
+    background-color: #16a34a;
+    height: 25px;
+    width: 250px;
+    border-radius: 8px;
+    opacity: var(0.5);
+    margin: 6px;
+    text-align: center;
+  }
