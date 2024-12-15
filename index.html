@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
+
 <body>
   <nav>
     <div class="container">
@@ -39,16 +41,16 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="https://i.ibb.co/tPLjt4v/doc.jpg" alt="Slide 1">
+        <img src="https://i.ibb.co/SXn9b0s/pexels-vidalbalielojrfotografia-4006979.jpg" alt="Slide 1">
       </div>
       <div class="swiper-slide">
-        <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+        <img src="https://i.ibb.co/9nMfn6w/pexels-shantumsingh-29528959.jpg" alt="Slide 2">
       </div>
       <div class="swiper-slide">
-        <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+        <img src="https://i.ibb.co/Kmq9MwG/pexels-srevadilla-2601274.jpg" alt="Slide 3">
       </div>
       <div class="swiper-slide">
-        <img src="https://via.placeholder.com/800x400?text=Slide+4" alt="Slide 4">
+        <img src="https://i.ibb.co/mcQsF8Q/district-katni-india-september-18-2019-indian-village-people-gathering-at-city-government-hospital-2.jpg" alt="Slide 4">
       </div>
     </div>
     <!-- <div class="swiper-pagination"></div> -->
@@ -324,23 +326,95 @@
         <option value="Uluberia">Uluberia</option>
         <option value="Uttar Dinajpur district">Uttar Dinajpur district</option>
         <option value="Uttarpara Kotrung">Uttarpara Kotrung</option>
-    </select>
+      </select>
     </div>
     <div>
-        <select id="orga" name="orga" class="form-select">
-            <option value="">Select Organization</option>
-            <option value="Burdwan medical college & hospital">Burdwan medical college & hospital</option>
-            <option value="Burdwan high court">Burdwan high court</option>
-            <option value="wow momos">wow momos</option>
-            <option value="Mankar college">Mankar college</option>
-            <option value="Tara Ma Rice Mill">Tara Ma Rice Mill</option>
-        </select>
+      <select id="orga" name="orga" class="form-select">
+        <option value="">Select Organization</option>
+        <option value="Burdwan medical college & hospital">Burdwan medical college & hospital</option>
+        <option value="Burdwan high court">Burdwan high court</option>
+        <option value="wow momos">wow momos</option>
+        <option value="Mankar college">Mankar college</option>
+        <option value="Tara Ma Rice Mill">Tara Ma Rice Mill</option>
+      </select>
     </div>
-    <p style="color: #1f2937;">"Time is the coin of your life. It is the only coin you have, and only you can determine how it will be spent." – Carl Sandburg.</p>
+    <p style="color: #1f2937;">"Time is the coin of your life. It is the only coin you have, and only you can determine
+      how it will be spent." – Carl Sandburg.</p>
   </div>
   <div style="background-color: #FF4500; padding: 20px; text-align: center;">
-    <h2 style="color: white;">Orange Section</h2>
-    <p style="color: white;">This is a section with an orange background.</p>
+    <!-- <h2 style="color: rgb(0, 0, 0); background-color: skyblue;">Burdwan Medical college & hospital</h2>
+    <div class="orga_status" style="color: white;">
+      <div>Free Ambulance Service 102</div>
+      <div>Empty bed:250 </div>
+      <div>blood: 250L A+ 350L A- 450L B+ 200L B- 700L AB+ 500L AB- 900L O+ 450L O-</div>
+      <div>Acctive doctor: 1500</div>
+      <div>And more info</div>
+    </div> -->
+    <div class="form-container"style=" font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f9; max-width: 600px; margin: auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <h3 style=" background-color: cadetblue;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px;
+          margin-bottom: 20px;">Burdwan Medical College & Hospital</h3>
+      <form action="#" method="POST">
+          <label style="            font-size: 1.1em;
+          margin-top: 10px;" for="ambulance">Free Ambulance Service:</label>
+          <input style="width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 5px;" type="text" id="ambulance" name="ambulance" value="102" readonly>
+
+          <label style="
+                      font-size: 1.1em;
+          margin-top: 10px;" for="beds">Empty Beds:</label>
+          <input style="width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 5px;" type="number" id="beds" name="beds" value="250" readonly>
+
+          <label style="            font-size: 1.1em;
+          margin-top: 10px;" for="blood">Blood Availability:</label>
+          <textarea style="width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 5px;" id="blood" name="blood" rows="6" readonly>
+A+: 250L
+A-: 350L
+B+: 450L
+B-: 200L
+AB+: 700L
+AB-: 500L
+O+: 900L
+O-: 450L
+          </textarea>
+
+          <label style="            font-size: 1.1em;
+          margin-top: 10px;" for="doctors">Active Doctors:</label>
+          <input style="width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 5px;" type="number" id="doctors" name="doctors" value="1500" readonly>
+
+          <label for="more-info">More Information:</label>
+          <textarea style="width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 5px;" id="more-info" name="more-info" rows="3" readonly="">Provide more details if necessary.</textarea>
+
+      </form>
+  </div>
+
   </div>
 
   <div class="info-section">
@@ -365,54 +439,51 @@
       </div>
     </div>
   </div>
-  
-        <!-- footer -->
 
-        <footer style="margin-top: 200px;">
-          <div class="footer-container">
-              <div class="footer-section about">
-                  <h3>About FollowUp</h3>
-                  <p>
-                      FollowUp is a platform dedicated to helping you manage your daily tasks and achieve your goals
-                      efficiently. Join us and take the first step toward a more organized life!
-                  </p>
-              </div>
+  <!-- footer -->
 
-              <div class="footer-section links">
-                  <h3>Quick Links</h3>
-                  <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Contact</a></li>
-                      <li><a href="login/login.html">Login</a></li>
-                  </ul>
-              </div>
+  <footer style="margin-top: 200px;">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About FollowUp</h3>
+        <p>
+          FollowUp is a platform dedicated to helping you manage your daily tasks and achieve your goals
+          efficiently. Join us and take the first step toward a more organized life!
+        </p>
+      </div>
 
-              <div class="footer-section social">
-                  <h3>Follow Us</h3>
-                  <div class="social-links">
-                      <a href="https://www.instagram.com/narayanmondalll/" title="Facebook"><img
-                              src="https://i.ibb.co/5FgNLq5/facebook.png" alt="Facebook"></a>
-                      <a href="https://www.instagram.com/narayanmondalll/" title="Twitter"><img
-                              src="https://i.ibb.co/QCXvjLT/twitter.png" alt="Twitter"></a>
-                      <a href="https://www.instagram.com/narayanmondalll/" title="Instagram"><img
-                              src="https://i.ibb.co/XDVgtnL/instagram.png" alt="Instagram"></a>
-                      <a href="https://www.instagram.com/narayanmondalll/" title="LinkedIn"><img
-                              src="https://i.ibb.co/gwZ5YB4/linkedin.png" alt="LinkedIn"></a>
-                  </div>
-              </div>
-          </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="login/login.html">Login</a></li>
+        </ul>
+      </div>
 
-          <div class="footer-bottom">
-              <p>© 2024 FollowUp | Designed with ❤️ by <a href="https://www.instagram.com/momentcaptured.in/">Narayan
-                      || Sabuj</a></p>
-          </div>
-      </footer>
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/mankarcollege/" title="Facebook"><img
+              src="https://i.ibb.co/KNGLxCR/10464408.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/narayanmondalll/" title="Instagram"><img
+              src="https://i.ibb.co/BrPkbvZ/2227.jpg" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 FollowUp | Designed with ❤️ by <a href="https://www.instagram.com/momentcaptured.in/">Narayan
+          || Sabuj</a></p>
+    </div>
+  </footer>
   </div>
 
   <script src="scripts.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  
+
 </body>
+
 </html>
