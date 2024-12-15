@@ -229,13 +229,14 @@ nav {
 
 
 #orga {
-  background-color: #16a34a;
+  background-color: #ffffff;
   height: 25px;
   width: 250px;
   border-radius: 8px;
+  padding:5px;
   /* opacity: var(0.5); */
   margin: 6px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>followUp</title>
+    <script src="https://unpkg.com/tailwindcss-cdn@3.4.10/tailwindcss.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',    // Modern purple
+                        secondary: '#F0ABFC',  // Light pink
+                        accent: '#22D3EE',     // Cyan
+                        neutral: '#1F2937',    // Dark gray (unchanged)
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-neutral">
+    <nav style="background: linear-gradient(to right, #1e40af, #6b21a8, #4338ca);" class="text-white" ">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">followUp</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#" class="hover:text-accent transition duration-300">Home</a>
+                <a href="#" class="hover:text-accent transition duration-300">About</a>
+                <a href="#" class="hover:text-accent transition duration-300">Services</a>
+                <a href="#" class="hover:text-accent transition duration-300">Contact</a>
+            </div>
+            <a href="login/login.html" class="hidden md:inline-block bg-accent text-white px-4 py-2 rounded hover:bg-opacity-80 transition duration-300">Login</a>
+            <button class="md:hidden text-2xl" id="mobileMenuButton">☰</button>
+        </div>
+        <div class="md:hidden hidden" id="mobileMenu">
+            <a href="#" class="block py-2 px-4 hover:bg-purple-700">Home</a>
+            <a href="#" class="block py-2 px-4 hover:bg-purple-700">About</a>
+            <a href="#" class="block py-2 px-4 hover:bg-purple-700">Services</a>
+            <a href="#" class="block py-2 px-4 hover:bg-purple-700">Contact</a>
+            <a href="login/login.html" class="block py-2 px-4 bg-accent hover:bg-red-500">Login</a>
+        </div>
+    </nav>
+
+    <header class="bg-secondary text-neutral text-center py-12">
+        <h1 class="text-4xl md:text-5xl font-bold">Welcome to <span class="text-primary">FollowUp!</span></h1>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-accent text-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold mb-4">Queries Section</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-4 mb-4">
+                <select class="w-full md:w-auto p-2 rounded bg-white text-neutral">
+                    <option value="">Select City</option>
+                    <option value="Ahmedpur">Ahmedpur</option>
+                    <option value="Uttar Dinajpur district">Uttar Dinajpur district</option>
+                    <option value="Uttarpara Kotrung">Uttarpara Kotrung</option>
+                </select>
+                <select class="w-full md:w-auto p-2 rounded bg-white text-neutral">
+                    <option value="">Select Organization</option>
+                    <option value="Burdwan medical college & hospital">Burdwan medical college & hospital</option>
+                    <option value="Burdwan high court">Burdwan high court</option>
+                    <option value="wow momos">wow momos</option>
+                    <option value="Mankar college">Mankar college</option>
+                    <option value="Tara Ma Rice Mill">Tara Ma Rice Mill</option>
+                </select>
+            </div>
+            <p class="italic text-sm">"Time is the coin of your life. It is the only coin you have, and only you can determine how it will be spent." – Carl Sandburg.</p>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold text-center mb-6 bg-primary text-white py-2 rounded">Burdwan Medical College & Hospital</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-gray-100 p-4 rounded">
+                    <h3 class="font-bold mb-2 text-primary">Free Ambulance Service</h3>
+                    <p class="text-3xl font-bold text-accent">102</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded">
+                    <h3 class="font-bold mb-2 text-primary">Empty Beds</h3>
+                    <p class="text-3xl font-bold text-accent" id="emptyBeds">250</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded">
+                    <h3 class="font-bold mb-2 text-primary">Active Doctors</h3>
+                    <p class="text-3xl font-bold text-accent" id="activeDoctors">1500</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded col-span-full">
+                    <h3 class="font-bold mb-2 text-primary">Blood Availability</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <div class="bg-primary text-white p-2 rounded text-center">A+: 250L</div>
+                        <div class="bg-primary text-white p-2 rounded text-center">A-: 350L</div>
+                        <div class="bg-primary text-white p-2 rounded text-center">B+: 450L</div>
+                        <div class="bg-primary text-white p-2 rounded text-center">B-: 200L</div>
+                        <div class="bg-primary text-white p-2 rounded text-center">AB+: 700L</div>
+                        <div class="bg-primary text-white p-2 rounded text-center">AB-: 500L</div>
+                        <div class="bg-primary text-white p-2 rounded text-center">O+: 900L</div>
+                        <div class="bg-primary text-white p-2 rounded text-center">O-: 450L</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h3 class="font-bold mb-2 text-primary">More Information</h3>
+                <p>Provide more details if necessary.</p>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-primary text-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-4">Location</h3>
+                <p>MANKAR COLLEGE</p>
+                <p>Mankar, Purba Bardhaman</p>
+                <p>time: 24 hr</p>
+            </div>
+            <div class="bg-secondary text-neutral p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-4">Contact</h3>
+                <p>Phone: 01213456789</p>
+                <p>Email: info@example.com</p>
+                <p>Fax: 9876543210</p>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer class="bg-neutral text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-accent mb-4">About FollowUp</h3>
+                    <p class="text-sm">
+                        FollowUp is a platform dedicated to helping you manage your daily tasks and achieve your goals
+                        efficiently. Join us and take the first step toward a more organized life!
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-accent mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent transition duration-300">Home</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">About</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">Services</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">Contact</a></li>
+                        <li><a href="login/login.html" class="hover:text-accent transition duration-300">Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-accent mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/mankarcollege/" class="hover:text-accent transition duration-300">
+                            <img src="https://i.ibb.co/KNGLxCR/10464408.png" alt="Facebook" class="w-8 h-8">
+                        </a>
+                        <a href="https://www.instagram.com/narayanmondalll/" class="hover:text-accent transition duration-300">
+                            <img src="https://i.ibb.co/BrPkbvZ/2227.jpg" alt="Instagram" class="w-8 h-8">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+                <p>© 2024 FollowUp | Designed with ❤️ by <a href="https://www.instagram.com/momentcaptured.in/" class="text-accent hover:underline">Narayan || Sabuj</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

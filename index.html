@@ -1,489 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>followUp</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LineUp - Smart Queue Management</title>
+    <script src="https://unpkg.com/tailwindcss-cdn@3.4.10/tailwindcss.js"></script>
+    <!-- Include Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#FFFFFF',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+<body class="bg-secondary text-primary">
+    <nav class="bg-primary text-secondary">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+          <a href="index.html" class="text-2xl font-bold">LineUp</a>
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-4">
+            <a href="#" class="hover:text-gray-300 transition duration-300">Home</a>
+            <a href="#" class="hover:text-gray-300 transition duration-300">About</a>
+            <a href="#" class="hover:text-gray-300 transition duration-300">Services</a>
+            <a href="#" class="hover:text-gray-300 transition duration-300">Contact</a>
+          </div>
+          <div class="hidden md:flex space-x-4">
+            <a href="login.html" class="bg-secondary text-primary border-2 border-primary px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Login</a>
+            <a href="signup.html" class="bg-secondary text-primary border-2 border-primary px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Sign Up</a>
+          </div>
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden text-2xl" id="mobileMenuButton">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white text-primary border-t border-gray-200" id="mobileMenu">
+          <a href="#" class="block py-2 px-4 hover:bg-gray-100 transition duration-300">Home</a>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-100 transition duration-300">About</a>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-100 transition duration-300">Services</a>
+          <a href="#" class="block py-2 px-4 hover:bg-gray-100 transition duration-300">Contact</a>
+          <!-- Buttons in Two-Column Layout -->
+          <div class="grid grid-cols-2 gap-2 px-4 py-2">
+            <a href="login.html" class="block text-center border-2 border-primary text-primary py-2 rounded-lg hover:bg-primary hover:text-white transition duration-300">Login</a>
+            <a href="signup.html" class="block text-center border-2 border-primary text-primary py-2 rounded-lg hover:bg-primary hover:text-white transition duration-300">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+    <header class="bg-primary text-secondary text-center py-20">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to LineUp</h1>
+        <p class="text-xl md:text-2xl mb-8">Smart Queue Management for Modern Businesses</p>
+        <a href="signup.html" class="bg-secondary text-primary px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">Get Started</a>
+    </header>
 
-<body>
-  <nav>
-    <div class="container">
-      <a href="index.html" class="logo">followUp</a>
-      <div class="menu">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 border-blue-900 border-2 p-6 rounded-lg shadow-lg hover:bg-blue-900 hover:text-white">
+                    <h3 class="text-xl font-semibold mb-4">1. Search</h3>
+                    <p>Find businesses by location and organization name.</p>
+                </div>
+                <div class="bg-gray-100  border-blue-900 border-2 p-6 rounded-lg shadow-lg hover:bg-blue-900 hover:text-white">
+                    <h3 class="text-xl font-semibold mb-4">2. Register</h3>
+                    <p>Log in and join the line for your chosen service.</p>
+                </div>
+                <div class="bg-gray-100  border-blue-900 border-2 p-6 rounded-lg shadow-lg hover:bg-blue-900 hover:text-white">
+                    <h3 class="text-xl font-semibold mb-4">3. Track</h3>
+                    <p>Monitor your position in line in real-time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add this section to your HTML -->
+<section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-8">Popular Services</h2>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <div class="bg-blue-900 text-white border-2 border-white p-6 rounded-lg shadow-lg hover:bg-white hover:text-blue-900 hover:border-blue-900 transition duration-300">
+          <h3 class="text-xl font-semibold mb-4">Healthcare</h3>
+          <p>Manage patient queues efficiently with organised system.</p>
+        </div>
       </div>
-      <div class="buttons">
-        <a href="login/login.html" class="button login">Login</a>
+      <div class="item">
+        <div class="bg-blue-900 text-white border-2 border-white p-6 rounded-lg shadow-lg hover:bg-white hover:text-blue-900 hover:border-blue-900 transition duration-300">
+          <h3 class="text-xl font-semibold mb-4">Government Services</h3>
+          <p>Streamline citizen services and reduce wait times.</p>
+        </div>
       </div>
-      <button class="mobile-menu-button" onclick="toggleMenu()">&#9776;</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-      <a href="login/login.html" class="button login">Login</a>
-
-    </div>
-  </nav>
-
-  <div class="header" style="margin-top: 5px;">
-    <h1>Welcome to <span>FollowUp!</span></h1>
-  </div>
-
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/SXn9b0s/pexels-vidalbalielojrfotografia-4006979.jpg" alt="Slide 1">
+      <div class="item">
+        <div class="bg-blue-900 text-white border-2 border-white p-6 rounded-lg shadow-lg hover:bg-white hover:text-blue-900 hover:border-blue-900 transition duration-300">
+          <h3 class="text-xl font-semibold mb-4">Retail</h3>
+          <p>Enhance customer experience with virtual queues.</p>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/9nMfn6w/pexels-shantumsingh-29528959.jpg" alt="Slide 2">
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/Kmq9MwG/pexels-srevadilla-2601274.jpg" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/mcQsF8Q/district-katni-india-september-18-2019-indian-village-people-gathering-at-city-government-hospital-2.jpg" alt="Slide 4">
-      </div>
-    </div>
-    <!-- <div class="swiper-pagination"></div> -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-
-  <div style="background-color: #FFD700; padding: 20px; text-align: center;">
-    <h2 style="color: #1f2937;"> Queries Section</h2>
-    <div>
-      <select id="orga" name="city" class="form-select">
-        <option value="">Select City</option>
-        <option value="Ahmedpur">Ahmedpur</option>
-        <option value="Aistala">Aistala</option>
-        <option value="Aknapur">Aknapur</option>
-        <option value="Alipurduar">Alipurduar</option>
-        <option value="Amlagora">Amlagora</option>
-        <option value="Amta">Amta</option>
-        <option value="Amtala">Amtala</option>
-        <option value="Andal">Andal</option>
-        <option value="Arambagh community development block">Arambagh community development block</option>
-        <option value="Asansol">Asansol</option>
-        <option value="Ashoknagar Kalyangarh">Ashoknagar Kalyangarh</option>
-        <option value="Badkulla">Badkulla</option>
-        <option value="Baduria">Baduria</option>
-        <option value="Bagdogra">Bagdogra</option>
-        <option value="Bagnan">Bagnan</option>
-        <option value="Bagula">Bagula</option>
-        <option value="Bahula">Bahula</option>
-        <option value="Baidyabati">Baidyabati</option>
-        <option value="Bakreswar">Bakreswar</option>
-        <option value="Balarampur">Balarampur</option>
-        <option value="Bali Chak">Bali Chak</option>
-        <option value="Bally">Bally</option>
-        <option value="Balurghat">Balurghat</option>
-        <option value="Bamangola community development block">Bamangola community development block</option>
-        <option value="Baneswar">Baneswar</option>
-        <option value="Bangaon">Bangaon</option>
-        <option value="Bankra">Bankra</option>
-        <option value="Bankura">Bankura</option>
-        <option value="Bansberia">Bansberia</option>
-        <option value="Bansihari community development block">Bansihari community development block</option>
-        <option value="Barabazar">Barabazar</option>
-        <option value="Baranagar">Baranagar</option>
-        <option value="Barasat">Barasat</option>
-        <option value="Bardhaman">Bardhaman</option>
-        <option value="Barjora">Barjora</option>
-        <option value="Barrackpore">Barrackpore</option>
-        <option value="Baruipur">Baruipur</option>
-        <option value="Basanti">Basanti</option>
-        <option value="Basirhat">Basirhat</option>
-        <option value="Bawali">Bawali</option>
-        <option value="Begampur">Begampur</option>
-        <option value="Belda">Belda</option>
-        <option value="Beldanga">Beldanga</option>
-        <option value="Beliatore">Beliatore</option>
-        <option value="Berhampore">Berhampore</option>
-        <option value="Bhadreswar">Bhadreswar</option>
-        <option value="Bhandardaha">Bhandardaha</option>
-        <option value="Bhatpara">Bhatpara</option>
-        <option value="Birbhum district">Birbhum district</option>
-        <option value="Birpara">Birpara</option>
-        <option value="Bishnupur">Bishnupur</option>
-        <option value="Bolpur">Bolpur</option>
-        <option value="Budge Budge">Budge Budge</option>
-        <option value="Canning">Canning</option>
-        <option value="Chakapara">Chakapara</option>
-        <option value="Chakdaha">Chakdaha</option>
-        <option value="Champadanga">Champadanga</option>
-        <option value="Champahati">Champahati</option>
-        <option value="Champdani">Champdani</option>
-        <option value="Chandannagar">Chandannagar</option>
-        <option value="Chandrakona">Chandrakona</option>
-        <option value="Chittaranjan">Chittaranjan</option>
-        <option value="Churulia">Churulia</option>
-        <option value="Contai">Contai</option>
-        <option value="Cooch Behar">Cooch Behar</option>
-        <option value="Cossimbazar">Cossimbazar</option>
-        <option value="Dakshin Dinajpur district">Dakshin Dinajpur district</option>
-        <option value="Dalkola">Dalkola</option>
-        <option value="Dam Dam">Dam Dam</option>
-        <option value="Darjeeling">Darjeeling</option>
-        <option value="Daulatpur">Daulatpur</option>
-        <option value="Debagram">Debagram</option>
-        <option value="Debipur">Debipur</option>
-        <option value="Dhaniakhali community development block">Dhaniakhali community development block
-        </option>
-        <option value="Dhulagari">Dhulagari</option>
-        <option value="Dhulian">Dhulian</option>
-        <option value="Dhupguri">Dhupguri</option>
-        <option value="Diamond Harbour">Diamond Harbour</option>
-        <option value="Digha">Digha</option>
-        <option value="Dinhata">Dinhata</option>
-        <option value="Domjur">Domjur</option>
-        <option value="Dubrajpur">Dubrajpur</option>
-        <option value="Durgapur">Durgapur</option>
-        <option value="Egra">Egra</option>
-        <option value="Falakata">Falakata</option>
-        <option value="Farakka">Farakka</option>
-        <option value="Fort Gloster">Fort Gloster</option>
-        <option value="Gaighata community development block">Gaighata community development block</option>
-        <option value="Gairkata">Gairkata</option>
-        <option value="Gangadharpur">Gangadharpur</option>
-        <option value="Gangarampur">Gangarampur</option>
-        <option value="Garui">Garui</option>
-        <option value="Garulia">Garulia</option>
-        <option value="Ghatal">Ghatal</option>
-        <option value="Giria">Giria</option>
-        <option value="Gobardanga">Gobardanga</option>
-        <option value="Gobindapur">Gobindapur</option>
-        <option value="Gopalpur">Gopalpur</option>
-        <option value="Gopinathpur">Gopinathpur</option>
-        <option value="Gorubathan">Gorubathan</option>
-        <option value="Gosaba">Gosaba</option>
-        <option value="Gosanimari">Gosanimari</option>
-        <option value="Gurdaha">Gurdaha</option>
-        <option value="Guskhara">Guskhara</option>
-        <option value="Habra">Habra</option>
-        <option value="Haldia">Haldia</option>
-        <option value="Haldibari">Haldibari</option>
-        <option value="Halisahar">Halisahar</option>
-        <option value="Harindanga">Harindanga</option>
-        <option value="Haringhata">Haringhata</option>
-        <option value="Haripur">Haripur</option>
-        <option value="Hasimara">Hasimara</option>
-        <option value="Hindusthan Cables Town">Hindusthan Cables Town</option>
-        <option value="Hooghly district">Hooghly district</option>
-        <option value="Howrah">Howrah</option>
-        <option value="Ichapur">Ichapur</option>
-        <option value="Indpur community development block">Indpur community development block</option>
-        <option value="Ingraj Bazar">Ingraj Bazar</option>
-        <option value="Islampur">Islampur</option>
-        <option value="Jafarpur">Jafarpur</option>
-        <option value="Jaigaon">Jaigaon</option>
-        <option value="Jalpaiguri">Jalpaiguri</option>
-        <option value="Jamuria">Jamuria</option>
-        <option value="Jangipur">Jangipur</option>
-        <option value="Jaynagar Majilpur">Jaynagar Majilpur</option>
-        <option value="Jejur">Jejur</option>
-        <option value="Jhalida">Jhalida</option>
-        <option value="Jhargram">Jhargram</option>
-        <option value="Jhilimili">Jhilimili</option>
-        <option value="Kakdwip">Kakdwip</option>
-        <option value="Kalaikunda">Kalaikunda</option>
-        <option value="Kaliaganj">Kaliaganj</option>
-        <option value="Kalimpong">Kalimpong</option>
-        <option value="Kalna">Kalna</option>
-        <option value="Kalyani">Kalyani</option>
-        <option value="Kamarhati">Kamarhati</option>
-        <option value="Kamarpukur">Kamarpukur</option>
-        <option value="Kanchrapara">Kanchrapara</option>
-        <option value="Kandi">Kandi</option>
-        <option value="Karimpur">Karimpur</option>
-        <option value="Katwa">Katwa</option>
-        <option value="Kenda">Kenda</option>
-        <option value="Keshabpur">Keshabpur</option>
-        <option value="Kharagpur">Kharagpur</option>
-        <option value="Kharar">Kharar</option>
-        <option value="Kharba">Kharba</option>
-        <option value="Khardaha">Khardaha</option>
-        <option value="Khatra">Khatra</option>
-        <option value="Kirnahar">Kirnahar</option>
-        <option value="Kolkata">Kolkata</option>
-        <option value="Konnagar">Konnagar</option>
-        <option value="Krishnanagar">Krishnanagar</option>
-        <option value="Krishnapur">Krishnapur</option>
-        <option value="Kshirpai">Kshirpai</option>
-        <option value="Kulpi">Kulpi</option>
-        <option value="Kultali">Kultali</option>
-        <option value="Kulti">Kulti</option>
-        <option value="Kurseong">Kurseong</option>
-        <option value="Lalgarh">Lalgarh</option>
-        <option value="Lalgola">Lalgola</option>
-        <option value="Loyabad">Loyabad</option>
-        <option value="Madanpur">Madanpur</option>
-        <option value="Madhyamgram">Madhyamgram</option>
-        <option value="Mahiari">Mahiari</option>
-        <option value="Mahishadal community development block">Mahishadal community development block
-        </option>
-        <option value="Mainaguri">Mainaguri</option>
-        <option value="Manikpara">Manikpara</option>
-        <option value="Masila">Masila</option>
-        <option value="Mathabhanga">Mathabhanga</option>
-        <option value="Matiali community development block">Matiali community development block</option>
-        <option value="Matigara community development block">Matigara community development block</option>
-        <option value="Medinipur">Medinipur</option>
-        <option value="Mejia community development block">Mejia community development block</option>
-        <option value="Memari">Memari</option>
-        <option value="Mirik">Mirik</option>
-        <option value="Mohanpur community development block">Mohanpur community development block</option>
-        <option value="Monoharpur">Monoharpur</option>
-        <option value="Muragacha">Muragacha</option>
-        <option value="Muri">Muri</option>
-        <option value="Murshidabad">Murshidabad</option>
-        <option value="Nabadwip">Nabadwip</option>
-        <option value="Nabagram">Nabagram</option>
-        <option value="Nadia district">Nadia district</option>
-        <option value="Nagarukhra">Nagarukhra</option>
-        <option value="Nagrakata">Nagrakata</option>
-        <option value="Naihati">Naihati</option>
-        <option value="Naksalbari">Naksalbari</option>
-        <option value="Nalhati">Nalhati</option>
-        <option value="Nalpur">Nalpur</option>
-        <option value="Namkhana community development block">Namkhana community development block</option>
-        <option value="Nandigram">Nandigram</option>
-        <option value="Nangi">Nangi</option>
-        <option value="Nayagram community development block">Nayagram community development block</option>
-        <option value="North 24 Parganas district">North 24 Parganas district</option>
-        <option value="Odlabari">Odlabari</option>
-        <option value="Paikpara">Paikpara</option>
-        <option value="Panagarh">Panagarh</option>
-        <option value="Panchla">Panchla</option>
-        <option value="Panchmura">Panchmura</option>
-        <option value="Pandua">Pandua</option>
-        <option value="Panihati">Panihati</option>
-        <option value="Panskura">Panskura</option>
-        <option value="Parbatipur">Parbatipur</option>
-        <option value="Paschim Medinipur district">Paschim Medinipur district</option>
-        <option value="Patiram">Patiram</option>
-        <option value="Patrasaer">Patrasaer</option>
-        <option value="Patuli">Patuli</option>
-        <option value="Pujali">Pujali</option>
-        <option value="Puncha community development block">Puncha community development block</option>
-        <option value="Purba Medinipur district">Purba Medinipur district</option>
-        <option value="Purulia">Purulia</option>
-        <option value="Raghudebbati">Raghudebbati</option>
-        <option value="Raghunathpur">Raghunathpur</option>
-        <option value="Raiganj">Raiganj</option>
-        <option value="Rajmahal">Rajmahal</option>
-        <option value="Rajnagar community development block">Rajnagar community development block</option>
-        <option value="Ramchandrapur">Ramchandrapur</option>
-        <option value="Ramjibanpur">Ramjibanpur</option>
-        <option value="Ramnagar">Ramnagar</option>
-        <option value="Rampur Hat">Rampur Hat</option>
-        <option value="Ranaghat">Ranaghat</option>
-        <option value="Raniganj">Raniganj</option>
-        <option value="Raypur">Raypur</option>
-        <option value="Rishra">Rishra</option>
-        <option value="Sahapur">Sahapur</option>
-        <option value="Sainthia">Sainthia</option>
-        <option value="Salanpur community development block">Salanpur community development block</option>
-        <option value="Sankarpur">Sankarpur</option>
-        <option value="Sankrail">Sankrail</option>
-        <option value="Santipur">Santipur</option>
-        <option value="Santoshpur">Santoshpur</option>
-        <option value="Santuri community development block">Santuri community development block</option>
-        <option value="Sarenga">Sarenga</option>
-        <option value="Serampore">Serampore</option>
-        <option value="Serpur">Serpur</option>
-        <option value="Shyamnagar, West Bengal">Shyamnagar, West Bengal</option>
-        <option value="Siliguri">Siliguri</option>
-        <option value="Singur">Singur</option>
-        <option value="Sodpur">Sodpur</option>
-        <option value="Solap">Solap</option>
-        <option value="Sonada">Sonada</option>
-        <option value="Sonamukhi">Sonamukhi</option>
-        <option value="Sonarpur community development block">Sonarpur community development block</option>
-        <option value="South 24 Parganas district">South 24 Parganas district</option>
-        <option value="Srikhanda">Srikhanda</option>
-        <option value="Srirampur">Srirampur</option>
-        <option value="Suri">Suri</option>
-        <option value="Swarupnagar community development block">Swarupnagar community development block
-        </option>
-        <option value="Takdah">Takdah</option>
-        <option value="Taki">Taki</option>
-        <option value="Tamluk">Tamluk</option>
-        <option value="Tarakeswar">Tarakeswar</option>
-        <option value="Titagarh">Titagarh</option>
-        <option value="Tufanganj">Tufanganj</option>
-        <option value="Tulin">Tulin</option>
-        <option value="Uchalan">Uchalan</option>
-        <option value="Ula">Ula</option>
-        <option value="Uluberia">Uluberia</option>
-        <option value="Uttar Dinajpur district">Uttar Dinajpur district</option>
-        <option value="Uttarpara Kotrung">Uttarpara Kotrung</option>
-      </select>
-    </div>
-    <div>
-      <select id="orga" name="orga" class="form-select">
-        <option value="">Select Organization</option>
-        <option value="Burdwan medical college & hospital">Burdwan medical college & hospital</option>
-        <option value="Burdwan high court">Burdwan high court</option>
-        <option value="wow momos">wow momos</option>
-        <option value="Mankar college">Mankar college</option>
-        <option value="Tara Ma Rice Mill">Tara Ma Rice Mill</option>
-      </select>
-    </div>
-    <p style="color: #1f2937;">"Time is the coin of your life. It is the only coin you have, and only you can determine
-      how it will be spent." – Carl Sandburg.</p>
-  </div>
-  <div style="background-color: #FF4500; padding: 20px; text-align: center;">
-    <!-- <h2 style="color: rgb(0, 0, 0); background-color: skyblue;">Burdwan Medical college & hospital</h2>
-    <div class="orga_status" style="color: white;">
-      <div>Free Ambulance Service 102</div>
-      <div>Empty bed:250 </div>
-      <div>blood: 250L A+ 350L A- 450L B+ 200L B- 700L AB+ 500L AB- 900L O+ 450L O-</div>
-      <div>Acctive doctor: 1500</div>
-      <div>And more info</div>
-    </div> -->
-    <div class="form-container"style=" font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f9; max-width: 600px; margin: auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-      <h3 style=" background-color: cadetblue;
-          color: #fff;
-          padding: 10px;
-          text-align: center;
-          border-radius: 5px;
-          margin-bottom: 20px;">Burdwan Medical College & Hospital</h3>
-      <form action="#" method="POST">
-          <label style="            font-size: 1.1em;
-          margin-top: 10px;" for="ambulance">Free Ambulance Service:</label>
-          <input style="width: 100%;
-          padding: 10px;
-          margin-top: 5px;
-          margin-bottom: 15px;
-          border: 1px solid #ddd;
-          border-radius: 5px;" type="text" id="ambulance" name="ambulance" value="102" readonly>
-
-          <label style="
-                      font-size: 1.1em;
-          margin-top: 10px;" for="beds">Empty Beds:</label>
-          <input style="width: 100%;
-          padding: 10px;
-          margin-top: 5px;
-          margin-bottom: 15px;
-          border: 1px solid #ddd;
-          border-radius: 5px;" type="number" id="beds" name="beds" value="250" readonly>
-
-          <label style="            font-size: 1.1em;
-          margin-top: 10px;" for="blood">Blood Availability:</label>
-          <textarea style="width: 100%;
-          padding: 10px;
-          margin-top: 5px;
-          margin-bottom: 15px;
-          border: 1px solid #ddd;
-          border-radius: 5px;" id="blood" name="blood" rows="6" readonly>
-A+: 250L
-A-: 350L
-B+: 450L
-B-: 200L
-AB+: 700L
-AB-: 500L
-O+: 900L
-O-: 450L
-          </textarea>
-
-          <label style="            font-size: 1.1em;
-          margin-top: 10px;" for="doctors">Active Doctors:</label>
-          <input style="width: 100%;
-          padding: 10px;
-          margin-top: 5px;
-          margin-bottom: 15px;
-          border: 1px solid #ddd;
-          border-radius: 5px;" type="number" id="doctors" name="doctors" value="1500" readonly>
-
-          <label for="more-info">More Information:</label>
-          <textarea style="width: 100%;
-          padding: 10px;
-          margin-top: 5px;
-          margin-bottom: 15px;
-          border: 1px solid #ddd;
-          border-radius: 5px;" id="more-info" name="more-info" rows="3" readonly="">Provide more details if necessary.</textarea>
-
-      </form>
-  </div>
-
-  </div>
-
-  <div class="info-section">
-    <div class="container" style="display: flex; gap: 24px; flex-wrap: wrap;">
-      <div class="info-card location-card">
-        <h3>Location</h3>
-        <p>MANKAR COLLEGE</p>
-        <p>Mankar, Purba Bardhaman</p>
-        <p>time:- 24 hr</p>
-      </div>
-      <div class="info-card contact-card">
-        <h3>Contact</h3>
-        <p>Phone: 01213456789</p>
-        <p>Email: mankarcollege@gmail.com</p>
-        <p>Fax: 9876543210</p>
-      </div>
-      <div class="info-card service-card">
-        <h3>Service</h3>
-        <p>Web Development</p>
-        <p>App Development</p>
-        <p>Digital Marketing</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- footer -->
-
-  <footer style="margin-top: 200px;">
-    <div class="footer-container">
-      <div class="footer-section about">
-        <h3>About FollowUp</h3>
-        <p>
-          FollowUp is a platform dedicated to helping you manage your daily tasks and achieve your goals
-          efficiently. Join us and take the first step toward a more organized life!
-        </p>
-      </div>
-
-      <div class="footer-section links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="login/login.html">Login</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section social">
-        <h3>Follow Us</h3>
-        <div class="social-links">
-          <a href="https://www.facebook.com/mankarcollege/" title="Facebook"><img
-              src="https://i.ibb.co/KNGLxCR/10464408.png" alt="Facebook"></a>
-          <a href="https://www.instagram.com/narayanmondalll/" title="Instagram"><img
-              src="https://i.ibb.co/BrPkbvZ/2227.jpg" alt="Instagram"></a>
+      <div class="item">
+        <div class="bg-blue-900 text-white border-2 border-white p-6 rounded-lg shadow-lg hover:bg-white hover:text-blue-900 hover:border-blue-900 transition duration-300">
+          <h3 class="text-xl font-semibold mb-4">Education</h3>
+          <p>Organize student services and counseling sessions.</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <p>© 2024 FollowUp | Designed with ❤️ by <a href="https://www.instagram.com/momentcaptured.in/">Narayan
-          || Sabuj</a></p>
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-8">Search for Services</h2>
+    <div class="max-w-4xl mx-auto">
+      <!-- Search Inputs -->
+      <div class="flex flex-col md:flex-row gap-4 mb-8">
+        <!-- Organization Input -->
+        <select class="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+          <option value="1" disabled selected>Select Organization</option>
+          <option value="hospital">City Hospital</option>
+          <option value="govt-office">Government Office</option>
+          <option value="school">Local School</option>
+        </select>
+        <!-- Line Dropdown -->
+        <select class="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+          <option value="" disabled selected>Select Line</option>
+          <option value="billing">Billing Counter</option>
+          <option value="enquiry">Enquiry Desk</option>
+          <option value="registration">Registration Counter</option>
+        </select>
+        <!-- Search Button -->
+        <button class="bg-primary text-secondary px-6 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Search</button>
+      </div>
+  
+      <!-- Results Section -->
+      <div class="border-t border-gray-300 pt-6">
+        <h3 class="text-2xl font-semibold mb-4">Available Lines</h3>
+        <div class="overflow-y-auto max-h-72 space-y-4">
+          <!-- Card 1 -->
+          <div class="p-4 bg-gray-100 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
+            <div>
+              <h4 class="text-lg font-bold">Billing Counter</h4>
+              <p class="text-sm text-gray-600">Number of People: 15</p>
+              <p class="text-sm text-gray-600">Capacity: 20</p>
+              <p class="text-sm text-gray-600">Closing Time: 5:00 PM</p>
+            </div>
+            <button class="bg-primary text-secondary px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Register</button>
+          </div>
+          <!-- Card 2 -->
+          <div class="p-4 bg-gray-100 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
+            <div>
+              <h4 class="text-lg font-bold">Enquiry Desk</h4>
+              <p class="text-sm text-gray-600">Number of People: 10</p>
+              <p class="text-sm text-gray-600">Capacity: 15</p>
+              <p class="text-sm text-gray-600">Closing Time: 4:30 PM</p>
+            </div>
+            <button class="bg-primary text-secondary px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Register</button>
+          </div>
+          <!-- Card 3 -->
+          <div class="p-4 bg-gray-100 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
+            <div>
+              <h4 class="text-lg font-bold">Registration Counter</h4>
+              <p class="text-sm text-gray-600">Number of People: 5</p>
+              <p class="text-sm text-gray-600">Capacity: 10</p>
+              <p class="text-sm text-gray-600">Closing Time: 3:00 PM</p>
+            </div>
+            <button class="bg-primary text-secondary px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Register</button>
+          </div>
+          <!-- Add more dummy cards as needed -->
+        </div>
+      </div>
     </div>
-  </footer>
-  </div>
+  </section>
+  
+    </main>
 
-  <script src="scripts.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <footer class="bg-primary text-secondary py-12">
+        <div class="container mx-auto px-4">
+            <!-- Grid Layout for Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About LineUp -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About LineUp</h3>
+                    <p class="text-sm leading-relaxed">
+                        LineUp is an innovative queue management platform that aims to simplify waiting times for businesses and enhance the experience for their customers. Say goodbye to long lines and hello to efficient management!
+                    </p>
+                </div>
+                <!-- Sitemap Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Sitemap</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:underline hover:text-gray-300 transition duration-300">Home</a></li>
+                        <li><a href="#" class="hover:underline hover:text-gray-300 transition duration-300">About</a></li>
+                        <li><a href="#" class="hover:underline hover:text-gray-300 transition duration-300">Services</a></li>
+                        <li><a href="#" class="hover:underline hover:text-gray-300 transition duration-300">Contact</a></li>
+                        <li><a href="login.html" class="hover:underline hover:text-gray-300 transition duration-300">Login</a></li>
+                        <li><a href="signup.html" class="hover:underline hover:text-gray-300 transition duration-300">Sign Up</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li><span class="font-medium">Email:</span> <a href="mailto:info@lineup.com" class="hover:underline hover:text-gray-300">info@lineup.com</a></li>
+                        <li><span class="font-medium">Phone:</span> <a href="tel:1234567890" class="hover:underline hover:text-gray-300">(123) 456-7890</a></li>
+                        <li><span class="font-medium">Address:</span> 123 Queue Street, Smart City, World</li>
+                    </ul>
+                </div>
+                <!-- Follow Us Section -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-secondary hover:text-gray-300 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.437 9.879v-6.99h-2.54v-2.889h2.54v-2.205c0-2.507 1.493-3.89 3.778-3.89 1.094 0 2.238.194 2.238.194v2.463h-1.261c-1.243 0-1.63.771-1.63 1.56v1.878h2.773l-.443 2.889h-2.33v6.99C18.343 21.128 22 16.991 22 12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary hover:text-gray-300 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557a9.835 9.835 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.86 9.86 0 0 1-3.127 1.195 4.924 4.924 0 0 0-8.384 4.482A13.978 13.978 0 0 1 1.671 3.149a4.92 4.92 0 0 0-.666 2.475c0 1.708.87 3.216 2.188 4.096a4.921 4.921 0 0 1-2.228-.616v.062a4.922 4.922 0 0 0 3.946 4.827 4.902 4.902 0 0 1-2.224.084 4.925 4.925 0 0 0 4.6 3.417 9.867 9.867 0 0 1-6.102 2.104c-.396 0-.788-.023-1.174-.068a13.945 13.945 0 0 0 7.548 2.212c9.057 0 14.009-7.512 14.009-14.009 0-.213-.005-.426-.015-.637A9.982 9.982 0 0 0 24 4.557z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary hover:text-gray-300 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c-5.473 0-9.84 4.367-9.84 9.84 0 4.296 2.681 7.945 6.545 9.249.478.087.652-.208.652-.465 0-.229-.01-.833-.014-1.634-2.654.579-3.213-1.279-3.213-1.279-.436-1.104-1.064-1.398-1.064-1.398-.869-.595.067-.583.067-.583.96.068 1.464.986 1.464.986.854 1.463 2.24 1.04 2.786.795.087-.62.335-1.041.609-1.281-2.119-.241-4.347-1.059-4.347-4.715 0-1.041.372-1.892.98-2.557-.098-.241-.424-1.213.093-2.531 0 0 .799-.257 2.618.981a9.115 9.115 0 0 1 2.384-.321c.809.004 1.623.11 2.384.321 1.818-1.238 2.617-.981 2.617-.981.518 1.318.192 2.29.094 2.531.61.665.98 1.516.98 2.557 0 3.665-2.233 4.472-4.364 4.708.345.298.652.888.652 1.792 0 1.293-.011 2.337-.011 2.653 0 .258.173.553.66.46 3.86-1.305 6.537-4.953 6.537-9.249 0-5.473-4.366-9.84-9.84-9.84z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-sm">
+                <p>© 2024 LineUp | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Include Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Initialize Owl Carousel -->
+<script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        responsive: {
+          0: { items: 1 },
+          768: { items: 2 },
+          1024: { items: 3 }
+        }
+      });
+    });
+  </script>
 </body>
-
 </html>
+
