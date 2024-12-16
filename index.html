@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LineUp - Smart Queue Management</title>
+    <title>FollowUp - Smart Queue Management</title>
     <script src="https://unpkg.com/tailwindcss-cdn@3.4.10/tailwindcss.js"></script>
     <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -26,7 +26,7 @@
 <body class="bg-secondary text-primary">
     <nav class="bg-primary text-secondary">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="index.html" class="text-2xl font-bold">LineUp</a>
+          <a href="index.html" class="text-2xl font-bold">FollowUp</a>
           <!-- Desktop Menu -->
           <div class="hidden md:flex space-x-4">
             <a href="#" class="hover:text-gray-300 transition duration-300">Home</a>
@@ -54,13 +54,75 @@
           </div>
         </div>
       </nav>
-    <header class="bg-primary text-secondary text-center py-20">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to LineUp</h1>
-        <p class="text-xl md:text-2xl mb-8">Smart Queue Management for Modern Businesses</p>
+    <header class="bg-primary text-secondary text-center py-16">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to FollowUp</h1>
+        <p class="text-xl md:text-2xl mb-8">Smart Queue Management for Modern India</p>
         <a href="signup.html" class="bg-secondary text-primary px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">Get Started</a>
     </header>
 
     <main class="container mx-auto px-4 py-12">
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-8">Search for Services</h2>
+        <div class="max-w-4xl mx-auto">
+          <!-- Search Inputs -->
+          <div class="flex flex-col md:flex-row gap-4 mb-8">
+            <!-- Organization Input -->
+            <select class="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="1" disabled selected>Select Organization Type</option>
+              <option value="hospital">City Hospital</option>
+              <option value="govt-office">Government Office</option>
+              <option value="school">Local School</option>
+            </select>
+            <!-- Line Dropdown -->
+            <select class="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="" disabled selected>Select Organization</option>
+              <option value="billing">Billing Counter</option>
+              <option value="enquiry">Enquiry Desk</option>
+              <option value="registration">Registration Counter</option>
+            </select>
+            <!-- Search Button -->
+            <button class="bg-primary text-secondary px-6 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Search</button>
+          </div>
+      
+          <!-- Results Section -->
+          <div class="border-t border-gray-300 pt-6">
+            <h3 class="text-2xl font-semibold mb-4">Available Lines</h3>
+            <div class="overflow-y-auto max-h-72 space-y-4">
+              <!-- Card 1 -->
+              <div class="p-4 bg-gray-100 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
+                <div>
+                  <h4 class="text-lg font-bold">Billing Counter</h4>
+                  <p class="text-sm text-gray-600">Number of People: 15</p>
+                  <p class="text-sm text-gray-600">Capacity: 20</p>
+                  <p class="text-sm text-gray-600">Closing Time: 5:00 PM</p>
+                </div>
+                <button class="bg-primary text-secondary px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Register</button>
+              </div>
+              <!-- Card 2 -->
+              <div class="p-4 bg-gray-100 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
+                <div>
+                  <h4 class="text-lg font-bold">Enquiry Desk</h4>
+                  <p class="text-sm text-gray-600">Number of People: 10</p>
+                  <p class="text-sm text-gray-600">Capacity: 15</p>
+                  <p class="text-sm text-gray-600">Closing Time: 4:30 PM</p>
+                </div>
+                <button class="bg-primary text-secondary px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Register</button>
+              </div>
+              <!-- Card 3 -->
+              <div class="p-4 bg-gray-100 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
+                <div>
+                  <h4 class="text-lg font-bold">Registration Counter</h4>
+                  <p class="text-sm text-gray-600">Number of People: 5</p>
+                  <p class="text-sm text-gray-600">Capacity: 10</p>
+                  <p class="text-sm text-gray-600">Closing Time: 3:00 PM</p>
+                </div>
+                <button class="bg-primary text-secondary px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Register</button>
+              </div>
+              <!-- Add more dummy cards as needed -->
+            </div>
+          </div>
+        </div>
+      </section>
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8">How It Works</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -110,68 +172,7 @@
     </div>
   </section>
 
-  <section class="mb-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Search for Services</h2>
-    <div class="max-w-4xl mx-auto">
-      <!-- Search Inputs -->
-      <div class="flex flex-col md:flex-row gap-4 mb-8">
-        <!-- Organization Input -->
-        <select class="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-          <option value="1" disabled selected>Select Organization</option>
-          <option value="hospital">City Hospital</option>
-          <option value="govt-office">Government Office</option>
-          <option value="school">Local School</option>
-        </select>
-        <!-- Line Dropdown -->
-        <select class="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-          <option value="" disabled selected>Select Line</option>
-          <option value="billing">Billing Counter</option>
-          <option value="enquiry">Enquiry Desk</option>
-          <option value="registration">Registration Counter</option>
-        </select>
-        <!-- Search Button -->
-        <button class="bg-primary text-secondary px-6 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Search</button>
-      </div>
   
-      <!-- Results Section -->
-      <div class="border-t border-gray-300 pt-6">
-        <h3 class="text-2xl font-semibold mb-4">Available Lines</h3>
-        <div class="overflow-y-auto max-h-72 space-y-4">
-          <!-- Card 1 -->
-          <div class="p-4 bg-gray-100 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
-            <div>
-              <h4 class="text-lg font-bold">Billing Counter</h4>
-              <p class="text-sm text-gray-600">Number of People: 15</p>
-              <p class="text-sm text-gray-600">Capacity: 20</p>
-              <p class="text-sm text-gray-600">Closing Time: 5:00 PM</p>
-            </div>
-            <button class="bg-primary text-secondary px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Register</button>
-          </div>
-          <!-- Card 2 -->
-          <div class="p-4 bg-gray-100 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
-            <div>
-              <h4 class="text-lg font-bold">Enquiry Desk</h4>
-              <p class="text-sm text-gray-600">Number of People: 10</p>
-              <p class="text-sm text-gray-600">Capacity: 15</p>
-              <p class="text-sm text-gray-600">Closing Time: 4:30 PM</p>
-            </div>
-            <button class="bg-primary text-secondary px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Register</button>
-          </div>
-          <!-- Card 3 -->
-          <div class="p-4 bg-gray-100 border border-gray-300 rounded-md shadow-sm flex justify-between items-center">
-            <div>
-              <h4 class="text-lg font-bold">Registration Counter</h4>
-              <p class="text-sm text-gray-600">Number of People: 5</p>
-              <p class="text-sm text-gray-600">Capacity: 10</p>
-              <p class="text-sm text-gray-600">Closing Time: 3:00 PM</p>
-            </div>
-            <button class="bg-primary text-secondary px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Register</button>
-          </div>
-          <!-- Add more dummy cards as needed -->
-        </div>
-      </div>
-    </div>
-  </section>
   
     </main>
 
@@ -179,11 +180,11 @@
         <div class="container mx-auto px-4">
             <!-- Grid Layout for Footer Content -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- About LineUp -->
+                <!-- About FollowUp -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4">About LineUp</h3>
+                    <h3 class="text-xl font-bold mb-4">About FollowUp</h3>
                     <p class="text-sm leading-relaxed">
-                        LineUp is an innovative queue management platform that aims to simplify waiting times for businesses and enhance the experience for their customers. Say goodbye to long lines and hello to efficient management!
+                        FollowUp is an innovative queue management platform that aims to simplify waiting times for businesses and enhance the experience for their customers. Say goodbye to long lines and hello to efficient management!
                     </p>
                 </div>
                 <!-- Sitemap Links -->
@@ -202,7 +203,7 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Us</h3>
                     <ul class="space-y-2">
-                        <li><span class="font-medium">Email:</span> <a href="mailto:info@lineup.com" class="hover:underline hover:text-gray-300">info@lineup.com</a></li>
+                        <li><span class="font-medium">Email:</span> <a href="mailto:info@FollowUp.com" class="hover:underline hover:text-gray-300">info@FollowUp.com</a></li>
                         <li><span class="font-medium">Phone:</span> <a href="tel:1234567890" class="hover:underline hover:text-gray-300">(123) 456-7890</a></li>
                         <li><span class="font-medium">Address:</span> 123 Queue Street, Smart City, World</li>
                     </ul>
@@ -231,7 +232,7 @@
             </div>
             <!-- Footer Bottom -->
             <div class="mt-12 pt-8 border-t border-gray-700 text-center text-sm">
-                <p>© 2024 LineUp | All rights reserved</p>
+                <p>© 2024 FollowUp | All rights reserved</p>
             </div>
         </div>
     </footer>
