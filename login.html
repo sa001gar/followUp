@@ -32,7 +32,7 @@
         </div> -->
 
         <!-- Login Form -->
-        <form>
+        <form id="loginForm" method="POST">
             <!-- Email Field -->
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium mb-1">Email</label>
@@ -69,7 +69,7 @@
                 type="submit" 
                 class="w-full bg-primary text-secondary py-3 rounded-md font-semibold hover:bg-opacity-90 transition duration-300"
             >
-                Login
+                <a href="dashboard.html">Login</a>
             </button>
         </form>
 
@@ -84,5 +84,33 @@
             <a href="index.html" class="text-primary hover:underline">Back to Home</a>
         </p>
     </div>
+
+    <script>
+        // Hardcoded credentials
+    const DEFAULT_EMAIL = "admin@example.com";
+    const DEFAULT_PASSWORD = "password123";
+
+    // Get form and error message element
+    const form = document.getElementById("loginForm");
+    const errorMessage = document.getElementById("errorMessage");
+
+    // Handle form submission
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default form submission
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // Check credentials
+        if (email === DEFAULT_EMAIL && password === DEFAULT_PASSWORD) {
+            // Login successful - redirect to dashboard
+            alert("Login successful!");
+            window.location.href = "dashboard.html"; // Replace with your dashboard page
+        } else {
+            // Login failed - show error message
+            errorMessage.textContent = "Invalid email or password.";
+        }
+    });
+    </script>
 </body>
 </html>
